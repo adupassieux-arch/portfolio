@@ -17,6 +17,9 @@ const ctx = { window: {} };
 vm.runInNewContext(fs.readFileSync(path.join(ROOT, "content.js"), "utf8"), ctx);
 const SITE = ctx.window.SITE;
 const PROJECTS = ctx.window.PROJECTS;
+const crypto = require("crypto");
+const ver = f => crypto.createHash("md5").update(fs.readFileSync(path.join(ROOT, f))).digest("hex").slice(0, 8);
+const V_CSS = ver("assets/style.css"), V_JS = ver("assets/app.js");
 const BASE = (SITE.url || "https://adupassieux-arch.github.io/portfolio/").replace(/\/?$/, "/");
 
 const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
@@ -68,7 +71,7 @@ function page({ rel, title, description, canonical, ogImage, ogType = "website",
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Oswald:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="${rel}assets/style.css">
+  <link rel="stylesheet" href="${rel}assets/style.css?v=${V_CSS}">
   ${jsonld ? `<script type="application/ld+json">${JSON.stringify(jsonld).replace(/</g, "\\u003c")}</script>` : ""}
 </head>
 <body id="top">
@@ -87,7 +90,7 @@ ${body}
     <span>© ${new Date().getFullYear()} ${esc(SITE.name)}${SITE.mainSite ? ` · <a href="${esc(SITE.mainSite)}" class="to-top">AD International Consulting</a>` : ""}</span>
     <a href="#top" class="to-top">↑ Back to top</a>
   </footer>
-  <script src="${rel}assets/app.js" defer></script>
+  <script src="${rel}assets/app.js?v=${V_JS}" defer></script>
 </body>
 </html>
 `;
