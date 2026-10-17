@@ -30,7 +30,7 @@
     <header class="site-header">
       <nav class="site-nav" aria-label="Navigation principale">
         ${SITE.galleries.map(g => `<a href="${g.page}" class="${g.id === activeGallery ? "active" : ""}">${esc(g.label)}</a>`).join("")}
-        <a href="contact.html" class="${page === "contact" ? "active" : ""}">Contact</a>
+        <a href="${esc(SITE.contactUrl || "contact.html")}" class="${page === "contact" ? "active" : ""}">Contact</a>
       </nav>
       <a class="site-name" href="${home.page}">${esc(SITE.name)}</a>
       <button class="menu-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span></button>
@@ -43,7 +43,7 @@
 
   $("#footer").innerHTML = `
     <footer class="site-footer">
-      <span>© ${new Date().getFullYear()} ${esc(SITE.name)}</span>
+      <span>© ${new Date().getFullYear()} ${esc(SITE.name)}${SITE.mainSite ? ` · <a href="${esc(SITE.mainSite)}" class="to-top">AD International Consulting</a>` : ""}</span>
       <a href="#top" class="to-top">↑ Back to top</a>
     </footer>`;
 
@@ -98,6 +98,7 @@
   }
 
   // ---------- Contact ----------
+  if (page === "contact" && SITE.contactUrl) { location.replace(SITE.contactUrl); return; }
   if (page === "contact") {
     document.title = `Contact — ${SITE.name}`;
     const email = (SITE.contactEmail || "").trim();

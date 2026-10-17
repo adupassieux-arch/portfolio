@@ -28,6 +28,8 @@ window.SITE = {
       "page": "index.html"
     }
   ],
+  "mainSite": "https://adupassieux-arch.github.io/",
+  "contactUrl": "https://adupassieux-arch.github.io/#contact",
   "contactEmail": "",
   "contactIntro": "For projects, collaborations or enquiries, please get in touch."
 };
