@@ -1,0 +1,26 @@
+# Régénère automatiquement les pages du portfolio
+# à chaque modification de content.js (ou des images) sur GitHub.
+name: Build portfolio pages
+on:
+  push:
+    branches: [main]
+    paths: ["content.js", "build.js", "images/**"]
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: node build.js
+      - name: Commit generated pages
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git diff --cached --quiet || git commit -m "Rebuild pages from content.js"
+          git push

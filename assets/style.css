@@ -186,3 +186,13 @@ a { color: inherit; text-decoration: none; }
   .project-images { gap: 14px; }
   .pager a { font-size: 12px; }
 }
+
+/* ---------- Ajouts pages générées ---------- */
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.project-kicker { margin: 0 0 14px; font-family: var(--font-display); font-size: 12px; letter-spacing: .16em; text-transform: uppercase; }
+.project-kicker a { color: var(--muted); }
+.project-kicker a:hover { color: var(--gold); }
+.site-footer a:not(.to-top):hover, .site-footer span a:hover { color: var(--gold); }
+.notfound { text-align: center; padding: 80px var(--gutter); }
+.notfound h1 { font-family: var(--font-display); font-weight: 400; letter-spacing: .06em; text-transform: uppercase; }
+.notfound a { color: var(--gold); }

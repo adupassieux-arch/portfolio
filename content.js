@@ -4,6 +4,9 @@
    • Ajouter un projet : copiez un bloc { ... } dans PROJECTS,
      changez slug / title / text / images, et placez les images
      dans le dossier images/<slug>/.
+   • Après chaque modification, les pages sont régénérées
+     (automatiquement sur GitHub, ou avec : node build.js).
+   • Chaque projet a sa propre adresse : /portfolio/<slug>/
    • L'ordre des blocs = l'ordre d'affichage dans la galerie.
    • Dans "text", chaque ligne = un paragraphe.
        "## Titre"      → intertitre
@@ -15,17 +18,20 @@
 
 window.SITE = {
   "name": "Aurélie Dupassieux",
+  "url": "https://adupassieux-arch.github.io/portfolio/",
   "description": "Interior design, art direction and strategy & markets — Aurélie Dupassieux, Paris.",
   "galleries": [
     {
       "id": "strategy",
       "label": "Strategy & Markets",
-      "page": "strategy.html"
+      "page": "strategy.html",
+      "description": "Strategy & Markets portfolio by Aurélie Dupassieux — brand direction, market briefings and institutional projects across finance, commodities and tokenization."
     },
     {
       "id": "design",
       "label": "Design",
-      "page": "index.html"
+      "page": "index.html",
+      "description": "Interior design and art direction portfolio by Aurélie Dupassieux, Paris — Moroccan riad suite, nocturne interiors, marble bathrooms, private offices and New York residences."
     }
   ],
   "mainSite": "https://adupassieux-arch.github.io/",
