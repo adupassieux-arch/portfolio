@@ -1,7 +1,5 @@
 # Portfolio — Aurélie Dupassieux
 
-Site portfolio statique, reconstruit depuis Adobe Portfolio. Il est hébergé gratuitement sur **GitHub Pages** et ne dépend d'aucun service payant.
-
 ## Contenu du dossier
 
 | Fichier / dossier | Rôle |
