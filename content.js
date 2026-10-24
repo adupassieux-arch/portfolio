@@ -35,6 +35,7 @@ window.SITE = {
     }
   ],
   "mainSite": "https://adupassieux-arch.github.io/",
+  "facebook": "https://www.facebook.com/MyCityLoftsParis",
   "contactUrl": "https://adupassieux-arch.github.io/#contact",
   "contactEmail": "",
   "contactIntro": "For projects, collaborations or enquiries, please get in touch."

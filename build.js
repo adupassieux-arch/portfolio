@@ -87,7 +87,7 @@ function page({ rel, title, description, canonical, ogImage, ogType = "website",
 ${body}
   </main>
   <footer class="site-footer">
-    <span>© ${new Date().getFullYear()} ${esc(SITE.name)}${SITE.mainSite ? ` · <a href="${esc(SITE.mainSite)}" class="to-top">AD International Consulting</a>` : ""}</span>
+    <span>© ${new Date().getFullYear()} ${esc(SITE.name)}${SITE.mainSite ? ` · <a href="${esc(SITE.mainSite)}" class="to-top">AD International Consulting</a>` : ""}${SITE.facebook ? ` · <a href="${esc(SITE.facebook)}" class="to-top" target="_blank" rel="noopener me">Facebook</a>` : ""}</span>
     <a href="#top" class="to-top">↑ Back to top</a>
   </footer>
   <script src="${rel}assets/app.js?v=${V_JS}" defer></script>
@@ -127,7 +127,7 @@ for (const g of SITE.galleries) {
     </section>`,
     jsonld: {
       "@context": "https://schema.org", "@type": "CollectionPage", name: `${g.label} — ${SITE.name}`, url,
-      author: { "@type": "Person", name: SITE.name, url: SITE.mainSite },
+      author: { "@type": "Person", name: SITE.name, url: SITE.mainSite, ...(SITE.facebook ? { sameAs: [SITE.facebook] } : {}) },
       hasPart: list.map(p => ({ "@type": "CreativeWork", name: p.title, url: BASE + p.slug + "/" })),
     },
   }));
@@ -169,7 +169,7 @@ for (const p of PROJECTS) {
       "@context": "https://schema.org", "@type": "CreativeWork", name: p.title, url,
       dateCreated: p.year, description: describe(p), genre: g.label,
       image: p.images.map(im => BASE + im.src),
-      author: { "@type": "Person", name: SITE.name, url: SITE.mainSite },
+      author: { "@type": "Person", name: SITE.name, url: SITE.mainSite, ...(SITE.facebook ? { sameAs: [SITE.facebook] } : {}) },
       isPartOf: { "@type": "CollectionPage", name: `${g.label} — ${SITE.name}`, url: BASE + (g.page === "index.html" ? "" : g.page) },
     },
   }));
