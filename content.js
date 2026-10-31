@@ -43,6 +43,32 @@ window.SITE = {
 
 window.PROJECTS = [
   {
+    "slug": "bugsys-social-club-brand-identity",
+    "gallery": "design",
+    "title": "Bugsy's Social Club — Brand Identity",
+    "year": "2026",
+    "cover": {
+      "src": "images/bugsys-social-club-brand-identity/cover.jpg"
+    },
+    "text": [
+      "Bugsy's Social Club is the concept and brand identity for a three-part venue in the Bastos district of Yaoundé, Cameroon: a café in the morning, a steak house & seafood restaurant through the day, and a DJ club at night.",
+      "The art direction draws on the glamour of 1940s American supper clubs — black, gold and ivory, a BS monogram in metallic gold, Limelight and Josefin Sans — warmed by Cameroonian touches: Penja pepper on the grill, live afro-jazz on Thursdays, and local artists on the walls.",
+      "## Deliverables",
+      "Concept and positioning, logo explorations and final monogram, colour palette and typography, business card, membership cards (Member, Gold, Black) and menu.",
+      "[View the project on Behance](https://www.behance.net/gallery/257846919/Bugsys-Club-Identit-de-marque)"
+    ],
+    "images": [
+      { "src": "images/bugsys-social-club-brand-identity/01.jpg" },
+      { "src": "images/bugsys-social-club-brand-identity/02.jpg" },
+      { "src": "images/bugsys-social-club-brand-identity/03.jpg" },
+      { "src": "images/bugsys-social-club-brand-identity/04.jpg" },
+      { "src": "images/bugsys-social-club-brand-identity/05.jpg" },
+      { "src": "images/bugsys-social-club-brand-identity/06.jpg" },
+      { "src": "images/bugsys-social-club-brand-identity/07.jpg" },
+      { "src": "images/bugsys-social-club-brand-identity/08.jpg" }
+    ]
+  },
+  {
     "slug": "a-moroccan-suite-in-soft-light",
     "gallery": "design",
     "title": "A Moroccan Suite in Soft Light",
