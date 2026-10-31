@@ -53,8 +53,12 @@ window.PROJECTS = [
     "text": [
       "Bugsy's Social Club is the concept and brand identity for a three-part venue in the Bastos district of Yaoundé, Cameroon: a café in the morning, a steak house & seafood restaurant through the day, and a DJ club at night.",
       "The art direction draws on the glamour of 1940s American supper clubs — black, gold and ivory, a BS monogram in metallic gold, Limelight and Josefin Sans — warmed by Cameroonian touches: Penja pepper on the grill, live afro-jazz on Thursdays, and local artists on the walls.",
+      "## Jazz at the heart",
+      "Cameroon gave jazz Manu Dibango and Richard Bona. Bugsy's makes it its soul: Thursday jazz nights with a live afro-jazz and soul trio over dinner before the DJ takes over, a rotating gallery of Cameroonian painters and sculptors, and a monthly opening night.",
+      "## A wild art deco",
+      "The black-and-gold palette is warmed by jungle green, fawn and carved wood: leopard print on the banquettes, gold-leaf panels, African masks and canvases on the walls.",
       "## Deliverables",
-      "Concept and positioning, logo explorations and final monogram, colour palette and typography, business card, membership cards (Member, Gold, Black) and menu.",
+      "Concept and positioning, music and art programming, art direction (palette, patterns, typography), logo explorations and final monogram, business card, membership cards (Member, Gold, Black) and menu.",
       "[View the project on Behance](https://www.behance.net/gallery/257846919/Bugsys-Club-Identit-de-marque)"
     ],
     "images": [
@@ -65,7 +69,9 @@ window.PROJECTS = [
       { "src": "images/bugsys-social-club-brand-identity/05.jpg" },
       { "src": "images/bugsys-social-club-brand-identity/06.jpg" },
       { "src": "images/bugsys-social-club-brand-identity/07.jpg" },
-      { "src": "images/bugsys-social-club-brand-identity/08.jpg" }
+      { "src": "images/bugsys-social-club-brand-identity/08.jpg" },
+      { "src": "images/bugsys-social-club-brand-identity/09.jpg" },
+      { "src": "images/bugsys-social-club-brand-identity/10.jpg" }
     ]
   },
   {
